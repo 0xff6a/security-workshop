@@ -1,0 +1,11 @@
+%h3 Users
+%table.table
+  %thead
+    %tr
+      %th Name
+      %th Email
+  %tbody
+    -User.all.each do |u|
+      %tr
+        %td=u.name.html_safe
+        %td=u.email.html_safe

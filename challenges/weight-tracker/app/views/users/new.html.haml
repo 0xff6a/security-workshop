@@ -1,0 +1,14 @@
+%h1 Start tracking your weight
+
+%p Sign up below for your free account on weight tracker. Enter your name and email adress and click 'Continue' below to get started.
+
+=form_for @user do |f|
+  =f.label :name
+  =f.text_field :name
+
+  =f.label :email
+  =f.text_field :email
+
+  %br
+  =f.submit 'Continue...', class: 'btn btn-primary'
+

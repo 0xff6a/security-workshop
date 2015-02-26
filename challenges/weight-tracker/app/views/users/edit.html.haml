@@ -1,0 +1,13 @@
+%h1 Almost done!
+
+%p Just select a password and let us know the details of any medications you're on and you can start tracking your weight with WeightTracker!
+
+=form_for @user do |f|
+  =f.label :password
+  =f.password_field :password
+
+  =f.label :medications
+  =f.text_area :medications
+
+  %br
+  =f.submit 'Create account', class: 'btn btn-primary'

@@ -1,0 +1,42 @@
+%h3=@user.name
+%p
+  Email: #{@user.email if @user.email}
+
+%p
+  Salary:
+  ="£#{@user.salary} GBP per annum"
+
+- unless current_user.manager? 
+  %p
+    Need this salary changed? Only managers can modify salaraies, so contact a user with the manager flag set to true for your payroll buddy account to modify your salary.
+
+- if current_user.manager? && current_user.manages?(@user.organisation)
+  %hr
+  %h4 Modify Salary
+  =form_tag salary_path, method: 'put' do
+    =hidden_field :salary, :user_id, value: @user.id
+    =label :salary, :amount, 'Amount (GBP)'
+    =text_field :salary, :amount, value: @user.salary
+    %br
+    =submit_tag 'Change salary'
+
+
+
+%h4="Payments to #{@user.name}"
+
+%table.table.table-bordered.table-striped.table-hover
+  %thead
+    %tr
+      %th Amount
+      %th Transaction date
+  %tbody
+    -@payments.each do |p|
+      %tr
+        %td
+          £
+          =p.amount
+        %td=p.transacted_at
+
+
+
+

@@ -1,0 +1,35 @@
+%h1
+  Hello
+  =current_user.name
+  \!
+
+
+%h3 Medication
+
+%p.medications=@medications
+
+%hr
+
+%h3 Secret
+
+%p.secret=@secret
+
+%hr
+
+%h3 Weight Entries
+
+%table.table
+  %thead
+    %tr
+      %th Weight
+      %th Weigh date/time
+  %tbody
+    -@entries.each do |e|
+      %tr
+        %td
+          =e.weight
+          kg
+        %td=e.weighed_at
+
+
+

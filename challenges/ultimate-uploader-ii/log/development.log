@@ -1,0 +1,49 @@
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-19 12:41:11 +0000
+Processing by UploadsController#index as HTML
+  Rendered uploads/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 563ms (Views: 555.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-19 12:41:12 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-19 12:41:12 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-19 12:41:12 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-19 12:41:12 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-19 12:41:12 +0000
+
+
+Started GET "/uploads/%2E%2E%2Fconfig%2Finitializers%2Fsecret_token.rb" for 127.0.0.1 at 2015-02-19 12:41:26 +0000
+Processing by UploadsController#show as 
+  Parameters: {"id"=>"../config/initializers/secret_token"}
+Sent file /Users/jeremyfox/Code/security-workshop-bundle/challenges/ultimate-uploader-ii/config/initializers/secret_token.rb (0.1ms)
+Completed 200 OK in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-19 13:16:51 +0000
+Processing by UploadsController#index as HTML
+  Rendered uploads/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 7ms (Views: 5.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-19 13:16:51 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-19 13:16:51 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-19 13:16:51 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-19 13:16:51 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-19 13:16:51 +0000

@@ -1,0 +1,27 @@
+!!!
+%html
+  %head
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+      %title= content_for?(:title) ? yield(:title) : "Payroll Buddy"
+      %meta{:content => content_for?(:description) ? yield(:description) : "Payroll Buddy", :name => "description"}
+        = stylesheet_link_tag "application", :media => "all"
+        = javascript_include_tag "application"
+        = csrf_meta_tags
+        = yield(:head)
+  %body{:class => "#{controller_name} #{action_name}"}
+    -if User.where(email: 'clark.kent@gmail.com').first.try(:salary) == 25000
+      %pre.secret=File.read Rails.root.join 'secret'
+    .navbar.navbar-fixed-top.navbar-inverse
+      %nav.navbar-inner
+        .container
+          = render 'layouts/navigation'
+    #main{:role => "main"}
+      .container
+        .content
+          .row
+            .span12
+              = render 'layouts/messages'
+              = yield
+          %footer
+      / ! end of .container
+    / ! end of #main

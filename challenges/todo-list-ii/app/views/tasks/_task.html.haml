@@ -1,0 +1,9 @@
+.task{class: task.done? ? 'done' : '' }
+  -if task.done?
+    %input{:type => 'checkbox', :checked => 'checked', :'data-task-id' => task.id}
+  -else
+    %input{:type => 'checkbox', :'data-task-id' => task.id }
+
+  %span.description=task.description
+  =form_tag task_path(task.id), method: 'delete' do
+    =submit_tag "delete", class: 'btn btn-xs btn-default'

@@ -1,0 +1,11 @@
+%h1 Sign in
+
+=form_tag session_path do |f|
+  =label :session, :email
+  =text_field :session, :email
+
+  =label :session, :password
+  =password_field :session, :password
+
+  %br
+  =submit_tag 'Sign in'

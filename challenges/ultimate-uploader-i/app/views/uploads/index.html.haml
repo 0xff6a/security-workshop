@@ -1,0 +1,13 @@
+
+%h1 Uploads
+
+-if @uploads.count == 0
+  %p No files uploaded yet
+-else
+  %ul
+  -@uploads.each do |name, path|
+    %li=link_to name, path
+
+= form_tag({action: :create}, multipart: true) do
+  = file_field_tag 'file'
+  = submit_tag "Upload"
