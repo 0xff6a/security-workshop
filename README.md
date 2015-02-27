@@ -1,10 +1,10 @@
 # Rails Security Workshop Solutions
 
-Solutions to the Ruby on Rails security workshop kindly provided by Ali (ali@happybearsoftware.com)
+Solutions to the Ruby on Rails security workshop run recently at MOJ Digital by Ali (ali@happybearsoftware.com)
 
 Code will not function without the associated rails apps which I have not uploaded, but solutions demonstrate automated exploits of a range of security vulnerabilities ranging from poorly designed authentication mechanisms, to a full compromise of a rails through remote code execution. 
 
-# Overview
+## Overview
 
 * Secret Keeper: non-access protected restful URLs
 * Payroll Buddy: more complex variant of secret keeper
