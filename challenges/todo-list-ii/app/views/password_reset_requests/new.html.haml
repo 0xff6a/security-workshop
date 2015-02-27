@@ -1,8 +1,0 @@
-%h1 Reset password
-
-=form_tag password_reset_request_path, class: 'auth' do
-  .form-group
-    =label_tag :email
-    =text_field_tag :email, params[:email], class: 'form-control'
-  .actions
-    =submit_tag "Send password reset link", class: 'btn btn-primary'

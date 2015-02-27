@@ -1,9 +1,0 @@
--if current_user.nil?
-  = link_to "Weight Tracker", root_path, :class => 'brand'
--else
-  =link_to "Weight Tracker", entries_path, class: 'brand'
-%ul.nav.navbar-nav
-  -if current_user.nil?
-    %li= link_to  "Sign in", new_session_path
-  -else
-    %li= link_to "Sign out", session_path, method: 'delete'
