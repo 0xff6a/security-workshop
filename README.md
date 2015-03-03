@@ -10,6 +10,7 @@ Code will not function without the associated rails apps which I have not upload
 * Payroll Buddy: more complex variant of secret keeper
 * Weight Tracker: broken registration mechanism
 * To Do I: broken password reset tokenisation
+* To Do I: more sophisticated (yet still predictable) password reset tokenisation
 * Uploader I: directory traversal vulnerability
 * Uploader II: decrypting rails cookies
 * Uploader III: modifying signed rails cookies 
